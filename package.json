@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "ytdl-core": "0.4.1",
+    "body-parser": "latest",
     "fluent-ffmpeg": "2.0.0-rc3",
     "youtube-mp3-downloader": "latest",
     "request": "latest",
