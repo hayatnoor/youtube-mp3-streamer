@@ -221,10 +221,21 @@
 			});
 
 			$('#submit-data').on('click', function () {
-				var video_id = $('#url').val().split('v=')[1];
+				var url = $('#url').val();
+
+				var video_id = '';
+
+				// if it's mobile url
+				if (url.indexOf('youtu.be') > -1) {
+					video_id = url.split('/')[1];
+
+				// normal youtube url
+				} else {
+					video_id = $('#url').val().split('v=')[1];
+				}
 
 				// If a YouTube URL was entered, process the video
-				if (video_id) {
+				if (video_id && video_id.length > 0) {
 
 					var ampersandPosition = video_id.indexOf('&');
 					if (ampersandPosition != -1) {
