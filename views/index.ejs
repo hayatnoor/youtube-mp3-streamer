@@ -253,7 +253,7 @@
 							var title = result[0].title;
 
 							$("#jquery_jplayer_1").jPlayer("setMedia", {
-								m4a: 'http://localhost:3000/data/' + file
+								m4a: window.location.href + '/data/' + file
 							});
 
 							$('#title').html(title);
