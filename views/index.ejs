@@ -227,7 +227,8 @@
 
 				// if it's mobile url
 				if (url.indexOf('youtu.be') > -1) {
-					video_id = url.split('/')[1];
+					video_id = url.split('/')[url.split('/').length - 1];
+					console.log(video_id);
 
 				// normal youtube url
 				} else {
